@@ -27,10 +27,10 @@ new Vue({
             // dieci email random
             for (let i = 0; i < 10; i++) {
                 axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
-                .then((axiosResp) => {
-                    this.eamil = axiosResp.data.response;
+                .then((axiosResponse) => {
+                    this.email = axiosResponse.data.response;
                     this.newEmails.push(this.email);
-                    
+                    console.log(axios)
                 });
             }
             console.log(newEmails);
